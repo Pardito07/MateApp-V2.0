@@ -9,7 +9,12 @@ namespace MateApp_V2._0
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cerrar la aplicación?", "Cerrar MateApp V2.0", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btn_restore_Click(object sender, EventArgs e)
