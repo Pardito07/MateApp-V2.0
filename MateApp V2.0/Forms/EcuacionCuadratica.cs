@@ -1,17 +1,25 @@
-using MateApp_V2._0.Forms;
+ï»¿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace MateApp_V2._0
+namespace MateApp_V2._0.Forms
 {
-    public partial class Form1 : Form
+    public partial class EcuacionCuadratica : Form
     {
-        public Form1()
+        public EcuacionCuadratica()
         {
             InitializeComponent();
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
+        private void btn_close_Click_1(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cerrar la aplicación?", "Cerrar MateApp V2.0", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Â¿EstÃ¡ seguro que desea cerrar la aplicaciÃ³n?", "Cerrar MateApp V2.0", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -19,7 +27,7 @@ namespace MateApp_V2._0
             }
         }
 
-        private void btn_restore_Click(object sender, EventArgs e)
+        private void btn_restore_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
             if (WindowState == FormWindowState.Normal)
@@ -33,7 +41,7 @@ namespace MateApp_V2._0
             }
         }
 
-        private void btn_maximize_Click(object sender, EventArgs e)
+        private void btn_maximize_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
             if (WindowState == FormWindowState.Maximized)
@@ -47,20 +55,20 @@ namespace MateApp_V2._0
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void EcuacionCuadratica_Load(object sender, EventArgs e)
         {
             btn_restore.Visible = false;
         }
 
-        private void btn_minimize_Click(object sender, EventArgs e)
+        private void btn_minimize_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btn_ecuacion_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            EcuacionCuadratica ecuacion = new EcuacionCuadratica();
-            ecuacion.Show();
+            Form1 form = new Form1();
+            form.Show();
             this.Hide();
         }
     }
