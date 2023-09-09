@@ -4,10 +4,15 @@ namespace MateApp_V2._0
 {
     public partial class Form1 : Form
     {
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
         public Form1()
         {
             InitializeComponent();
+            player.SoundLocation = "ACDC  Thunderstruck.wav";
         }
+
+        public bool music = false;
 
         private void btn_close_Click(object sender, EventArgs e)
         {
@@ -50,6 +55,12 @@ namespace MateApp_V2._0
         private void Form1_Load(object sender, EventArgs e)
         {
             btn_restore.Visible = false;
+
+            if (!music)
+            {
+                player.PlayLooping();
+                music = true;
+            }
         }
 
         private void btn_minimize_Click(object sender, EventArgs e)
@@ -61,6 +72,13 @@ namespace MateApp_V2._0
         {
             EcuacionCuadratica ecuacion = new EcuacionCuadratica();
             ecuacion.Show();
+            this.Hide();
+        }
+
+        private void btn_creditos_Click(object sender, EventArgs e)
+        {
+            Creditos creditos = new Creditos();
+            creditos.Show();
             this.Hide();
         }
     }

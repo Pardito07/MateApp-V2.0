@@ -56,7 +56,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 33);
+            toolStrip1.Size = new Size(1163, 31);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -68,7 +68,7 @@
             btn_close.ImageTransparentColor = Color.Magenta;
             btn_close.Name = "btn_close";
             btn_close.RightToLeft = RightToLeft.No;
-            btn_close.Size = new Size(34, 28);
+            btn_close.Size = new Size(28, 28);
             btn_close.Text = "Cerrar";
             btn_close.Click += btn_close_Click;
             // 
@@ -79,7 +79,7 @@
             btn_restore.Image = (Image)resources.GetObject("btn_restore.Image");
             btn_restore.ImageTransparentColor = Color.Magenta;
             btn_restore.Name = "btn_restore";
-            btn_restore.Size = new Size(34, 28);
+            btn_restore.Size = new Size(28, 28);
             btn_restore.Text = "restaurar";
             btn_restore.Click += btn_restore_Click;
             // 
@@ -90,7 +90,7 @@
             btn_maximize.Image = (Image)resources.GetObject("btn_maximize.Image");
             btn_maximize.ImageTransparentColor = Color.Magenta;
             btn_maximize.Name = "btn_maximize";
-            btn_maximize.Size = new Size(34, 28);
+            btn_maximize.Size = new Size(28, 28);
             btn_maximize.Text = "Maximizar";
             btn_maximize.Click += btn_maximize_Click;
             // 
@@ -101,7 +101,7 @@
             btn_minimize.Image = (Image)resources.GetObject("btn_minimize.Image");
             btn_minimize.ImageTransparentColor = Color.Magenta;
             btn_minimize.Name = "btn_minimize";
-            btn_minimize.Size = new Size(34, 28);
+            btn_minimize.Size = new Size(28, 28);
             btn_minimize.Text = "Minimizar";
             btn_minimize.Click += btn_minimize_Click;
             // 
@@ -235,6 +235,7 @@
             btn_creditos.TabIndex = 10;
             btn_creditos.Text = "Créditos";
             btn_creditos.UseVisualStyleBackColor = false;
+            btn_creditos.Click += btn_creditos_Click;
             // 
             // label1
             // 
@@ -242,15 +243,15 @@
             label1.BackColor = Color.MediumSpringGreen;
             label1.Font = new Font("JetBrains Mono", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(396, 63);
+            label1.Location = new Point(461, 56);
             label1.Name = "label1";
-            label1.Size = new Size(389, 58);
+            label1.Size = new Size(269, 40);
             label1.TabIndex = 11;
             label1.Text = "Matemáticas V8";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(11F, 23F);
+            AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
@@ -270,6 +271,7 @@
             Controls.Add(toolStrip1);
             Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

@@ -66,34 +66,57 @@ namespace MateApp_V2._0.Forms
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void btn_volver_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
+            form.music = true;
             form.Show();
             this.Hide();
+
         }
 
         private void txt_a_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            if (txt_a.Text.Contains("-"))
             {
-                e.Handled = true;
+                if (e.KeyChar == '-')
+                {
+                    e.Handled = true;
+                }
+                else if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+                {
+                    e.Handled = true;
+                }
             }
         }
 
         private void txt_b_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            if (txt_b.Text.Contains("-"))
             {
-                e.Handled = true;
+                if (e.KeyChar == '-')
+                {
+                    e.Handled = true;
+                }
+                else if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+                {
+                    e.Handled = true;
+                }
             }
         }
 
         private void txt_c_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            if (txt_c.Text.Contains("-"))
             {
-                e.Handled = true;
+                if (e.KeyChar == '-')
+                {
+                    e.Handled = true;
+                }
+                else if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+                {
+                    e.Handled = true;
+                }
             }
         }
 
@@ -101,9 +124,10 @@ namespace MateApp_V2._0.Forms
         {
             double a = 0, b = 0, c = 0, x1, x2;
 
-            if (txt_a.Text.Trim() == "" || txt_b.Text.Trim() == "" || txt_c.Text.Trim() == "")
+            if (txt_a.Text.Trim() == "" || txt_b.Text.Trim() == "" || txt_c.Text.Trim() == "" || txt_a.Text == "-" || txt_b.Text == "-" || txt_c.Text == "-")
             {
-                MessageBox.Show("Los valores de A,B y C son obligatorios", "Campos Vacíos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Los valores de A,B y C deben tener números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             a = Convert.ToDouble(txt_a.Text);
@@ -112,16 +136,40 @@ namespace MateApp_V2._0.Forms
 
             calcular(a, b, c, out x1, out x2);
 
-            //if(x1 < 0 && x2 < 0)
-            //{
-            //    txt_x1.Text = Convert.ToString(x1) + "i";
-            //    txt_x2.Text = Convert.ToString(x2) + "i";
-            //    return;
-            //}
+            if (x1.Equals(double.NaN) || x2.Equals(double.NaN))
+            {
+                MessageBox.Show("La ecuacion no tiene solucion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            txt_x1.Text = Convert.ToString(x1);
-            txt_x2.Text = Convert.ToString(x2);
-
+            if (x1 < 0 && x2 < 0)
+            {
+                x1 = Math.Round(x1, 2);
+                txt_x1.Text = x1.ToString() + "i";
+                x2 = Math.Round(x2, 2);
+                txt_x2.Text = x2.ToString() + "i";
+            }
+            else if (x1 < 0 && x2 > 0)
+            {
+                x1 = Math.Round(x1, 2);
+                txt_x1.Text = x1.ToString() + "i";
+                x2 = Math.Round(x2, 2);
+                txt_x2.Text = x2.ToString();
+            }
+            else if (x2 < 0 && x1 > 0)
+            {
+                x1 = Math.Round(x1, 2);
+                txt_x1.Text = x1.ToString();
+                x2 = Math.Round(x2, 2);
+                txt_x2.Text = x2.ToString() + "i";
+            }
+            else
+            {
+                x1 = Math.Round(x1, 2);
+                txt_x1.Text = x1.ToString();
+                x2 = Math.Round(x2, 2);
+                txt_x2.Text = x2.ToString();
+            }
         }
 
         private void calcular(double a, double b, double c, out double x1, out double x2)
