@@ -59,7 +59,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 31);
+            toolStrip1.Size = new Size(1163, 33);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -71,7 +71,7 @@
             btn_close.ImageTransparentColor = Color.Magenta;
             btn_close.Name = "btn_close";
             btn_close.RightToLeft = RightToLeft.No;
-            btn_close.Size = new Size(28, 28);
+            btn_close.Size = new Size(34, 28);
             btn_close.Text = "Cerrar";
             btn_close.Click += btn_close_Click_1;
             // 
@@ -82,7 +82,7 @@
             btn_restore.Image = (Image)resources.GetObject("btn_restore.Image");
             btn_restore.ImageTransparentColor = Color.Magenta;
             btn_restore.Name = "btn_restore";
-            btn_restore.Size = new Size(28, 28);
+            btn_restore.Size = new Size(34, 28);
             btn_restore.Text = "restaurar";
             btn_restore.Click += btn_restore_Click_1;
             // 
@@ -93,7 +93,7 @@
             btn_maximize.Image = (Image)resources.GetObject("btn_maximize.Image");
             btn_maximize.ImageTransparentColor = Color.Magenta;
             btn_maximize.Name = "btn_maximize";
-            btn_maximize.Size = new Size(28, 28);
+            btn_maximize.Size = new Size(34, 28);
             btn_maximize.Text = "Maximizar";
             btn_maximize.Click += btn_maximize_Click_1;
             // 
@@ -104,7 +104,7 @@
             btn_minimize.Image = (Image)resources.GetObject("btn_minimize.Image");
             btn_minimize.ImageTransparentColor = Color.Magenta;
             btn_minimize.Name = "btn_minimize";
-            btn_minimize.Size = new Size(28, 28);
+            btn_minimize.Size = new Size(34, 28);
             btn_minimize.Text = "Minimizar";
             btn_minimize.Click += btn_minimize_Click_1;
             // 
@@ -114,12 +114,13 @@
             btn_volver.Image = (Image)resources.GetObject("btn_volver.Image");
             btn_volver.ImageTransparentColor = Color.Magenta;
             btn_volver.Name = "btn_volver";
-            btn_volver.Size = new Size(28, 28);
+            btn_volver.Size = new Size(34, 28);
             btn_volver.Text = "Volver";
             btn_volver.Click += btn_volver_Click;
             // 
             // btn_calcular
             // 
+            btn_calcular.Anchor = AnchorStyles.Bottom;
             btn_calcular.BackColor = Color.MediumTurquoise;
             btn_calcular.Cursor = Cursors.Hand;
             btn_calcular.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -133,6 +134,7 @@
             // 
             // lbl_a
             // 
+            lbl_a.Anchor = AnchorStyles.Bottom;
             lbl_a.AutoSize = true;
             lbl_a.BackColor = Color.MediumTurquoise;
             lbl_a.FlatStyle = FlatStyle.Flat;
@@ -140,110 +142,120 @@
             lbl_a.ForeColor = Color.Black;
             lbl_a.Location = new Point(158, 275);
             lbl_a.Name = "lbl_a";
-            lbl_a.Size = new Size(36, 19);
+            lbl_a.Size = new Size(52, 29);
             lbl_a.TabIndex = 3;
             lbl_a.Text = "a =";
             lbl_a.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.BackColor = Color.MediumTurquoise;
             label2.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
             label2.Location = new Point(158, 326);
             label2.Name = "label2";
-            label2.Size = new Size(36, 19);
+            label2.Size = new Size(52, 29);
             label2.TabIndex = 4;
             label2.Text = "b =";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Bottom;
             label3.AutoSize = true;
             label3.BackColor = Color.MediumTurquoise;
             label3.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
             label3.Location = new Point(158, 377);
             label3.Name = "label3";
-            label3.Size = new Size(36, 19);
+            label3.Size = new Size(52, 29);
             label3.TabIndex = 5;
             label3.Text = "c =";
             label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Bottom;
             label4.AutoSize = true;
             label4.BackColor = Color.MediumTurquoise;
             label4.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.Black;
             label4.Location = new Point(786, 292);
             label4.Name = "label4";
-            label4.Size = new Size(45, 19);
+            label4.Size = new Size(65, 29);
             label4.TabIndex = 6;
             label4.Text = "x1 =";
             label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Bottom;
             label5.AutoSize = true;
             label5.BackColor = Color.MediumTurquoise;
             label5.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Black;
             label5.Location = new Point(786, 365);
             label5.Name = "label5";
-            label5.Size = new Size(45, 19);
+            label5.Size = new Size(65, 29);
             label5.TabIndex = 7;
             label5.Text = "x2 =";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txt_b
             // 
+            txt_b.Anchor = AnchorStyles.Bottom;
             txt_b.Location = new Point(244, 325);
             txt_b.Name = "txt_b";
             txt_b.ShortcutsEnabled = false;
-            txt_b.Size = new Size(150, 23);
+            txt_b.Size = new Size(150, 31);
             txt_b.TabIndex = 2;
             txt_b.KeyPress += txt_b_KeyPress;
             // 
             // txt_a
             // 
+            txt_a.Anchor = AnchorStyles.Bottom;
             txt_a.Location = new Point(244, 276);
             txt_a.Name = "txt_a";
             txt_a.ShortcutsEnabled = false;
-            txt_a.Size = new Size(150, 23);
+            txt_a.Size = new Size(150, 31);
             txt_a.TabIndex = 1;
             txt_a.KeyPress += txt_a_KeyPress;
             // 
             // txt_c
             // 
+            txt_c.Anchor = AnchorStyles.Bottom;
             txt_c.Location = new Point(244, 377);
             txt_c.Name = "txt_c";
             txt_c.ShortcutsEnabled = false;
-            txt_c.Size = new Size(150, 23);
+            txt_c.Size = new Size(150, 31);
             txt_c.TabIndex = 3;
             txt_c.KeyPress += txt_c_KeyPress;
             // 
             // txt_x1
             // 
+            txt_x1.Anchor = AnchorStyles.Bottom;
             txt_x1.Enabled = false;
             txt_x1.Location = new Point(869, 293);
             txt_x1.Name = "txt_x1";
             txt_x1.ReadOnly = true;
-            txt_x1.Size = new Size(150, 23);
+            txt_x1.Size = new Size(150, 31);
             txt_x1.TabIndex = 5;
             // 
             // txt_x2
             // 
+            txt_x2.Anchor = AnchorStyles.Bottom;
             txt_x2.Enabled = false;
             txt_x2.Location = new Point(869, 363);
             txt_x2.Name = "txt_x2";
             txt_x2.ReadOnly = true;
-            txt_x2.Size = new Size(150, 23);
+            txt_x2.Size = new Size(150, 31);
             txt_x2.TabIndex = 6;
             // 
             // btn_limpiar
             // 
+            btn_limpiar.Anchor = AnchorStyles.Bottom;
             btn_limpiar.BackColor = Color.MediumTurquoise;
             btn_limpiar.Cursor = Cursors.Hand;
             btn_limpiar.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -257,18 +269,19 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.MediumTurquoise;
             label1.Font = new Font("JetBrains Mono", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(237, 42);
+            label1.Location = new Point(111, 56);
             label1.Name = "label1";
-            label1.Size = new Size(683, 40);
+            label1.Size = new Size(987, 58);
             label1.TabIndex = 9;
             label1.Text = "Resolución de ecuaciones de 2do grado";
             // 
             // EcuacionCuadratica
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");

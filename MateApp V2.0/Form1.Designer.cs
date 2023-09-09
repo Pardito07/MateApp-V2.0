@@ -44,7 +44,7 @@
             btn_ordenamiento = new Button();
             btn_plano = new Button();
             btn_creditos = new Button();
-            label1 = new Label();
+            lbl_titulo = new Label();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,7 +56,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 31);
+            toolStrip1.Size = new Size(1163, 33);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -68,7 +68,7 @@
             btn_close.ImageTransparentColor = Color.Magenta;
             btn_close.Name = "btn_close";
             btn_close.RightToLeft = RightToLeft.No;
-            btn_close.Size = new Size(28, 28);
+            btn_close.Size = new Size(34, 28);
             btn_close.Text = "Cerrar";
             btn_close.Click += btn_close_Click;
             // 
@@ -79,7 +79,7 @@
             btn_restore.Image = (Image)resources.GetObject("btn_restore.Image");
             btn_restore.ImageTransparentColor = Color.Magenta;
             btn_restore.Name = "btn_restore";
-            btn_restore.Size = new Size(28, 28);
+            btn_restore.Size = new Size(34, 28);
             btn_restore.Text = "restaurar";
             btn_restore.Click += btn_restore_Click;
             // 
@@ -90,7 +90,7 @@
             btn_maximize.Image = (Image)resources.GetObject("btn_maximize.Image");
             btn_maximize.ImageTransparentColor = Color.Magenta;
             btn_maximize.Name = "btn_maximize";
-            btn_maximize.Size = new Size(28, 28);
+            btn_maximize.Size = new Size(34, 28);
             btn_maximize.Text = "Maximizar";
             btn_maximize.Click += btn_maximize_Click;
             // 
@@ -101,12 +101,13 @@
             btn_minimize.Image = (Image)resources.GetObject("btn_minimize.Image");
             btn_minimize.ImageTransparentColor = Color.Magenta;
             btn_minimize.Name = "btn_minimize";
-            btn_minimize.Size = new Size(28, 28);
+            btn_minimize.Size = new Size(34, 28);
             btn_minimize.Text = "Minimizar";
             btn_minimize.Click += btn_minimize_Click;
             // 
             // btn_ecuacion
             // 
+            btn_ecuacion.Anchor = AnchorStyles.Bottom;
             btn_ecuacion.BackColor = Color.MediumSpringGreen;
             btn_ecuacion.Cursor = Cursors.Hand;
             btn_ecuacion.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -121,6 +122,7 @@
             // 
             // btn_angulos
             // 
+            btn_angulos.Anchor = AnchorStyles.Bottom;
             btn_angulos.BackColor = Color.MediumSpringGreen;
             btn_angulos.Cursor = Cursors.Hand;
             btn_angulos.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -134,6 +136,7 @@
             // 
             // btn_determinante
             // 
+            btn_determinante.Anchor = AnchorStyles.Bottom;
             btn_determinante.BackColor = Color.MediumSpringGreen;
             btn_determinante.Cursor = Cursors.Hand;
             btn_determinante.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -147,6 +150,7 @@
             // 
             // btn_cajero
             // 
+            btn_cajero.Anchor = AnchorStyles.Bottom;
             btn_cajero.BackColor = Color.MediumSpringGreen;
             btn_cajero.Cursor = Cursors.Hand;
             btn_cajero.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -160,6 +164,7 @@
             // 
             // btn_herencia
             // 
+            btn_herencia.Anchor = AnchorStyles.Bottom;
             btn_herencia.BackColor = Color.MediumSpringGreen;
             btn_herencia.Cursor = Cursors.Hand;
             btn_herencia.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -173,6 +178,7 @@
             // 
             // btn_ventas
             // 
+            btn_ventas.Anchor = AnchorStyles.Bottom;
             btn_ventas.BackColor = Color.MediumSpringGreen;
             btn_ventas.Cursor = Cursors.Hand;
             btn_ventas.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -186,6 +192,7 @@
             // 
             // btn_mcd
             // 
+            btn_mcd.Anchor = AnchorStyles.Bottom;
             btn_mcd.BackColor = Color.MediumSpringGreen;
             btn_mcd.Cursor = Cursors.Hand;
             btn_mcd.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -199,6 +206,7 @@
             // 
             // btn_ordenamiento
             // 
+            btn_ordenamiento.Anchor = AnchorStyles.Bottom;
             btn_ordenamiento.BackColor = Color.MediumSpringGreen;
             btn_ordenamiento.Cursor = Cursors.Hand;
             btn_ordenamiento.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -212,6 +220,7 @@
             // 
             // btn_plano
             // 
+            btn_plano.Anchor = AnchorStyles.Bottom;
             btn_plano.BackColor = Color.MediumSpringGreen;
             btn_plano.Cursor = Cursors.Hand;
             btn_plano.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -225,6 +234,7 @@
             // 
             // btn_creditos
             // 
+            btn_creditos.Anchor = AnchorStyles.Bottom;
             btn_creditos.BackColor = Color.MediumSpringGreen;
             btn_creditos.Cursor = Cursors.Hand;
             btn_creditos.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Bold, GraphicsUnit.Point);
@@ -237,27 +247,28 @@
             btn_creditos.UseVisualStyleBackColor = false;
             btn_creditos.Click += btn_creditos_Click;
             // 
-            // label1
+            // lbl_titulo
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.MediumSpringGreen;
-            label1.Font = new Font("JetBrains Mono", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(461, 56);
-            label1.Name = "label1";
-            label1.Size = new Size(269, 40);
-            label1.TabIndex = 11;
-            label1.Text = "Matemáticas V8";
+            lbl_titulo.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            lbl_titulo.AutoSize = true;
+            lbl_titulo.BackColor = Color.MediumSpringGreen;
+            lbl_titulo.Font = new Font("JetBrains Mono", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_titulo.ForeColor = SystemColors.ControlText;
+            lbl_titulo.Location = new Point(427, 61);
+            lbl_titulo.Name = "lbl_titulo";
+            lbl_titulo.Size = new Size(389, 58);
+            lbl_titulo.TabIndex = 11;
+            lbl_titulo.Text = "Matemáticas V8";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleDimensions = new SizeF(11F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1163, 751);
-            Controls.Add(label1);
+            Controls.Add(lbl_titulo);
             Controls.Add(btn_creditos);
             Controls.Add(btn_plano);
             Controls.Add(btn_ordenamiento);
@@ -299,6 +310,6 @@
         private Button btn_ordenamiento;
         private Button btn_plano;
         private Button btn_creditos;
-        private Label label1;
+        private Label lbl_titulo;
     }
 }
