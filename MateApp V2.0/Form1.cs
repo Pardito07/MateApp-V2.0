@@ -10,7 +10,7 @@ namespace MateApp_V2._0
         public Form1()
         {
             InitializeComponent();
-            player.SoundLocation = "ACDC  Thunderstruck.wav";
+            //player.SoundLocation = "ACDC  Thunderstruck.wav";
         }
 
         public bool music = false;
@@ -80,6 +80,20 @@ namespace MateApp_V2._0
         {
             Creditos creditos = new Creditos();
             creditos.Show();
+            this.Hide();
+        }
+
+        private void btn_angulos_Click(object sender, EventArgs e)
+        {
+            AngulosAgudos angulos = new AngulosAgudos();
+            angulos.Show();
+            this.Hide();
+        }
+
+        private void btn_cajero_Click(object sender, EventArgs e)
+        {
+            Cajero cajero = new Cajero();
+            cajero.Show();
             this.Hide();
         }
     }

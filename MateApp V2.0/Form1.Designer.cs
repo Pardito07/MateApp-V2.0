@@ -133,6 +133,7 @@
             btn_angulos.TabIndex = 2;
             btn_angulos.Text = "Ángulos Agudos";
             btn_angulos.UseVisualStyleBackColor = false;
+            btn_angulos.Click += btn_angulos_Click;
             // 
             // btn_determinante
             // 
@@ -161,6 +162,7 @@
             btn_cajero.TabIndex = 4;
             btn_cajero.Text = "Cajero";
             btn_cajero.UseVisualStyleBackColor = false;
+            btn_cajero.Click += btn_cajero_Click;
             // 
             // btn_herencia
             // 

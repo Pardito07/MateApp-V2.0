@@ -72,7 +72,6 @@ namespace MateApp_V2._0.Forms
             form.music = true;
             form.Show();
             this.Hide();
-
         }
 
         private void txt_a_KeyPress(object sender, KeyPressEventArgs e)
