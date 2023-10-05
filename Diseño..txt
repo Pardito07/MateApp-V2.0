@@ -1,0 +1,6 @@
+Diseño.
+
+Tamaño formulario: 1163; 751
+Tamaño textbox: 180; 31
+Tamaño fuente títulos: 22
+Tamaño fuente textos: 11

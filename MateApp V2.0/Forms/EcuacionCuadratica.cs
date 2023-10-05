@@ -76,9 +76,9 @@ namespace MateApp_V2._0.Forms
 
         private void txt_a_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txt_a.Text.Contains("-"))
+            if (txt_a.Text.Contains("-") || e.KeyChar != '-')
             {
-                if (e.KeyChar == '-')
+                if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
                 {
                     e.Handled = true;
                 }
@@ -91,9 +91,9 @@ namespace MateApp_V2._0.Forms
 
         private void txt_b_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txt_b.Text.Contains("-"))
+            if (txt_b.Text.Contains("-") || e.KeyChar != '-')
             {
-                if (e.KeyChar == '-')
+                if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
                 {
                     e.Handled = true;
                 }
@@ -106,9 +106,9 @@ namespace MateApp_V2._0.Forms
 
         private void txt_c_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txt_c.Text.Contains("-"))
+            if (txt_c.Text.Contains("-") || e.KeyChar != '-')
             {
-                if (e.KeyChar == '-')
+                if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
                 {
                     e.Handled = true;
                 }

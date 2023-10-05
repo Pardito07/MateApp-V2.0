@@ -135,6 +135,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("JetBrains Mono", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point);
@@ -213,6 +214,7 @@
             // 
             // txt_cien
             // 
+            txt_cien.Anchor = AnchorStyles.Bottom;
             txt_cien.BorderStyle = BorderStyle.FixedSingle;
             txt_cien.Enabled = false;
             txt_cien.Location = new Point(943, 241);
@@ -223,6 +225,7 @@
             // 
             // txt_veinte
             // 
+            txt_veinte.Anchor = AnchorStyles.Bottom;
             txt_veinte.BorderStyle = BorderStyle.FixedSingle;
             txt_veinte.Enabled = false;
             txt_veinte.Location = new Point(943, 304);
@@ -233,6 +236,7 @@
             // 
             // txt_diez
             // 
+            txt_diez.Anchor = AnchorStyles.Bottom;
             txt_diez.BorderStyle = BorderStyle.FixedSingle;
             txt_diez.Enabled = false;
             txt_diez.Location = new Point(943, 363);
@@ -243,6 +247,7 @@
             // 
             // txt_cinco
             // 
+            txt_cinco.Anchor = AnchorStyles.Bottom;
             txt_cinco.BorderStyle = BorderStyle.FixedSingle;
             txt_cinco.Enabled = false;
             txt_cinco.Location = new Point(943, 426);
@@ -253,6 +258,7 @@
             // 
             // txt_uno
             // 
+            txt_uno.Anchor = AnchorStyles.Bottom;
             txt_uno.BorderStyle = BorderStyle.FixedSingle;
             txt_uno.Enabled = false;
             txt_uno.Location = new Point(943, 477);
@@ -293,6 +299,7 @@
             // 
             // txt_monto
             // 
+            txt_monto.Anchor = AnchorStyles.Bottom;
             txt_monto.BorderStyle = BorderStyle.FixedSingle;
             txt_monto.Location = new Point(252, 308);
             txt_monto.Name = "txt_monto";

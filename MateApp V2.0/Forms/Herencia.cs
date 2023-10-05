@@ -10,12 +10,22 @@ using System.Windows.Forms;
 
 namespace MateApp_V2._0.Forms
 {
-    public partial class Cajero : Form
+    public partial class Herencia : Form
     {
-        public Cajero()
+        public Herencia()
         {
             InitializeComponent();
         }
+
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
 
         private void btn_volver_Click(object sender, EventArgs e)
         {
@@ -68,63 +78,18 @@ namespace MateApp_V2._0.Forms
             }
         }
 
-        private void Cajero_Load(object sender, EventArgs e)
+        private void Herencia_Load(object sender, EventArgs e)
         {
             btn_restore.Visible = false;
         }
 
-        private void btn_retirar_Click(object sender, EventArgs e)
+        private void tsp_top_MouseDown(object sender, MouseEventArgs e)
         {
-            int monto;
-            monto = Convert.ToInt32(txt_monto.Text);
-            if (monto > 500)
+            if (e.Button == MouseButtons.Left)
             {
-                MessageBox.Show("El monto máximo a retirar es de $500", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_monto.Text = "";
-                return;
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
-
-            if(monto <= 0)
-            {
-                MessageBox.Show("El monto mínimo a retirar es de $5", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txt_monto.Text = "";
-                return;
-            }
-
-            CalcularMonto(monto);
-        }
-
-        private void txt_monto_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
-            {
-                e.Handled = true;
-            }
-        }
-
-        void CalcularMonto(int monto)
-        {
-            int cien, veinte, diez, cinco, uno;
-
-            cien = monto / 100;
-            veinte = (monto % 100) / 20;
-            diez = (monto % 20) / 10;
-            cinco = (monto % 10) / 5;
-            uno = (monto % 5) / 1;
-
-            txt_cien.Text = Convert.ToString(cien);
-            txt_veinte.Text = Convert.ToString(veinte);
-            txt_diez.Text = Convert.ToString(diez);
-            txt_cinco.Text = Convert.ToString(cinco);
-            txt_uno.Text = Convert.ToString(uno);
-        }
-
-        private void btn_limpiar_Click(object sender, EventArgs e)
-        {
-            txt_monto.Text = "";
-            txt_cien.Text = "";
-            txt_veinte.Text = "";
-            txt_diez.Text = "";
         }
     }
 }

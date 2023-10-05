@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            toolStrip1 = new ToolStrip();
+            tsp_top = new ToolStrip();
             btn_close = new ToolStripButton();
             btn_restore = new ToolStripButton();
             btn_maximize = new ToolStripButton();
@@ -45,20 +45,21 @@
             btn_plano = new Button();
             btn_creditos = new Button();
             lbl_titulo = new Label();
-            toolStrip1.SuspendLayout();
+            tsp_top.SuspendLayout();
             SuspendLayout();
             // 
-            // toolStrip1
+            // tsp_top
             // 
-            toolStrip1.BackColor = Color.MediumSpringGreen;
-            toolStrip1.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 33);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            tsp_top.BackColor = Color.MediumSpringGreen;
+            tsp_top.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            tsp_top.ImageScalingSize = new Size(24, 24);
+            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize });
+            tsp_top.Location = new Point(0, 0);
+            tsp_top.Name = "tsp_top";
+            tsp_top.Size = new Size(1163, 33);
+            tsp_top.TabIndex = 0;
+            tsp_top.Text = "toolStrip1";
+            tsp_top.MouseDown += tsp_top_MouseDown;
             // 
             // btn_close
             // 
@@ -148,6 +149,7 @@
             btn_determinante.TabIndex = 3;
             btn_determinante.Text = "Determinante";
             btn_determinante.UseVisualStyleBackColor = false;
+            btn_determinante.Click += btn_determinante_Click;
             // 
             // btn_cajero
             // 
@@ -177,6 +179,7 @@
             btn_herencia.TabIndex = 5;
             btn_herencia.Text = "Herencia";
             btn_herencia.UseVisualStyleBackColor = false;
+            btn_herencia.Click += btn_herencia_Click;
             // 
             // btn_ventas
             // 
@@ -281,7 +284,7 @@
             Controls.Add(btn_determinante);
             Controls.Add(btn_angulos);
             Controls.Add(btn_ecuacion);
-            Controls.Add(toolStrip1);
+            Controls.Add(tsp_top);
             Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -289,15 +292,15 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             Load += Form1_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            tsp_top.ResumeLayout(false);
+            tsp_top.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ToolStrip toolStrip1;
+        private ToolStrip tsp_top;
         private ToolStripButton btn_close;
         private ToolStripButton btn_maximize;
         private ToolStripButton btn_minimize;
