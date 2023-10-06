@@ -125,6 +125,8 @@ namespace MateApp_V2._0.Forms
             txt_cien.Text = "";
             txt_veinte.Text = "";
             txt_diez.Text = "";
+            txt_cinco.Text = "";
+            txt_uno.Text = "";
         }
     }
 }

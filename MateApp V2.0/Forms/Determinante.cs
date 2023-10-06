@@ -223,7 +223,5 @@ namespace MateApp_V2._0.Forms
             txt_x.Text = Convert.ToString(x);
             txt_y.Text = Convert.ToString(y);
         }
-
-        
     }
 }
