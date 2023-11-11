@@ -46,6 +46,8 @@
             txt_luis = new TextBox();
             txt_juan = new TextBox();
             txt_rosa = new TextBox();
+            txt_licenciado = new TextBox();
+            label6 = new Label();
             tsp_top.SuspendLayout();
             SuspendLayout();
             // 
@@ -121,7 +123,7 @@
             // 
             label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
-            label1.BackColor = Color.DarkSeaGreen;
+            label1.BackColor = Color.Transparent;
             label1.Font = new Font("JetBrains Mono", 21.9999981F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(451, 47);
@@ -134,7 +136,7 @@
             // 
             label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
-            label2.BackColor = Color.DarkSeaGreen;
+            label2.BackColor = Color.MediumTurquoise;
             label2.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
             label2.Location = new Point(45, 298);
@@ -149,6 +151,7 @@
             txt_herencia.BorderStyle = BorderStyle.FixedSingle;
             txt_herencia.Location = new Point(285, 311);
             txt_herencia.Name = "txt_herencia";
+            txt_herencia.ShortcutsEnabled = false;
             txt_herencia.Size = new Size(180, 31);
             txt_herencia.TabIndex = 8;
             txt_herencia.KeyPress += txt_herencia_KeyPress;
@@ -156,7 +159,7 @@
             // btn_limpiar
             // 
             btn_limpiar.Anchor = AnchorStyles.Bottom;
-            btn_limpiar.BackColor = Color.DarkSeaGreen;
+            btn_limpiar.BackColor = Color.MediumTurquoise;
             btn_limpiar.Cursor = Cursors.Hand;
             btn_limpiar.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             btn_limpiar.ForeColor = Color.White;
@@ -166,11 +169,12 @@
             btn_limpiar.TabIndex = 26;
             btn_limpiar.Text = "Limpiar";
             btn_limpiar.UseVisualStyleBackColor = false;
+            btn_limpiar.Click += btn_limpiar_Click;
             // 
             // btn_calcular
             // 
             btn_calcular.Anchor = AnchorStyles.Bottom;
-            btn_calcular.BackColor = Color.DarkSeaGreen;
+            btn_calcular.BackColor = Color.MediumTurquoise;
             btn_calcular.Cursor = Cursors.Hand;
             btn_calcular.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             btn_calcular.ForeColor = Color.White;
@@ -186,10 +190,10 @@
             // 
             label3.Anchor = AnchorStyles.Bottom;
             label3.AutoSize = true;
-            label3.BackColor = Color.DarkSeaGreen;
+            label3.BackColor = Color.MediumTurquoise;
             label3.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(709, 310);
+            label3.Location = new Point(706, 284);
             label3.Name = "label3";
             label3.Size = new Size(221, 29);
             label3.TabIndex = 27;
@@ -199,10 +203,10 @@
             // 
             label4.Anchor = AnchorStyles.Bottom;
             label4.AutoSize = true;
-            label4.BackColor = Color.DarkSeaGreen;
+            label4.BackColor = Color.MediumTurquoise;
             label4.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(709, 449);
+            label4.Location = new Point(706, 413);
             label4.Name = "label4";
             label4.Size = new Size(221, 29);
             label4.TabIndex = 28;
@@ -212,10 +216,10 @@
             // 
             label5.Anchor = AnchorStyles.Bottom;
             label5.AutoSize = true;
-            label5.BackColor = Color.DarkSeaGreen;
+            label5.BackColor = Color.MediumTurquoise;
             label5.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(709, 385);
+            label5.Location = new Point(706, 349);
             label5.Name = "label5";
             label5.Size = new Size(221, 29);
             label5.TabIndex = 29;
@@ -226,9 +230,10 @@
             txt_luis.Anchor = AnchorStyles.Bottom;
             txt_luis.BorderStyle = BorderStyle.FixedSingle;
             txt_luis.Enabled = false;
-            txt_luis.Location = new Point(936, 311);
+            txt_luis.Location = new Point(933, 285);
             txt_luis.Name = "txt_luis";
             txt_luis.ReadOnly = true;
+            txt_luis.ShortcutsEnabled = false;
             txt_luis.Size = new Size(180, 31);
             txt_luis.TabIndex = 30;
             // 
@@ -237,9 +242,10 @@
             txt_juan.Anchor = AnchorStyles.Bottom;
             txt_juan.BorderStyle = BorderStyle.FixedSingle;
             txt_juan.Enabled = false;
-            txt_juan.Location = new Point(936, 385);
+            txt_juan.Location = new Point(933, 349);
             txt_juan.Name = "txt_juan";
             txt_juan.ReadOnly = true;
+            txt_juan.ShortcutsEnabled = false;
             txt_juan.Size = new Size(180, 31);
             txt_juan.TabIndex = 31;
             // 
@@ -248,11 +254,37 @@
             txt_rosa.Anchor = AnchorStyles.Bottom;
             txt_rosa.BorderStyle = BorderStyle.FixedSingle;
             txt_rosa.Enabled = false;
-            txt_rosa.Location = new Point(936, 447);
+            txt_rosa.Location = new Point(933, 411);
             txt_rosa.Name = "txt_rosa";
             txt_rosa.ReadOnly = true;
+            txt_rosa.ShortcutsEnabled = false;
             txt_rosa.Size = new Size(180, 31);
             txt_rosa.TabIndex = 32;
+            // 
+            // txt_licenciado
+            // 
+            txt_licenciado.Anchor = AnchorStyles.Bottom;
+            txt_licenciado.BorderStyle = BorderStyle.FixedSingle;
+            txt_licenciado.Enabled = false;
+            txt_licenciado.Location = new Point(933, 479);
+            txt_licenciado.Name = "txt_licenciado";
+            txt_licenciado.ReadOnly = true;
+            txt_licenciado.ShortcutsEnabled = false;
+            txt_licenciado.Size = new Size(180, 31);
+            txt_licenciado.TabIndex = 34;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Bottom;
+            label6.AutoSize = true;
+            label6.BackColor = Color.MediumTurquoise;
+            label6.Font = new Font("JetBrains Mono", 10.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(667, 481);
+            label6.Name = "label6";
+            label6.Size = new Size(260, 29);
+            label6.TabIndex = 33;
+            label6.Text = "Monto licenciado: $";
             // 
             // Herencia
             // 
@@ -262,6 +294,8 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1163, 751);
+            Controls.Add(txt_licenciado);
+            Controls.Add(label6);
             Controls.Add(txt_rosa);
             Controls.Add(txt_juan);
             Controls.Add(txt_luis);
@@ -306,5 +340,7 @@
         private TextBox txt_luis;
         private TextBox txt_juan;
         private TextBox txt_rosa;
+        private TextBox txt_licenciado;
+        private Label label6;
     }
 }

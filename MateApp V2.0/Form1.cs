@@ -18,7 +18,7 @@ namespace MateApp_V2._0
         public Form1()
         {
             InitializeComponent();
-            //player.SoundLocation = "ACDC  Thunderstruck.wav";
+            player.SoundLocation = "ACDC  Thunderstruck.wav";
         }
 
         public bool music = false;
@@ -64,12 +64,7 @@ namespace MateApp_V2._0
         private void Form1_Load(object sender, EventArgs e)
         {
             btn_restore.Visible = false;
-
-            if (!music)
-            {
-                player.PlayLooping();
-                music = true;
-            }
+            btn_stop.Visible = false;
         }
 
         private void btn_minimize_Click(object sender, EventArgs e)
@@ -125,6 +120,28 @@ namespace MateApp_V2._0
             {
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void btn_play_Click(object sender, EventArgs e)
+        {
+            btn_stop.Visible = true;
+            btn_play.Visible = false;
+            if (!music)
+            {
+                player.PlayLooping();
+                music = true;
+            }
+        }
+
+        private void btn_stop_Click(object sender, EventArgs e)
+        {
+            btn_stop.Visible = false;
+            btn_play.Visible = true;
+            if (music)
+            {
+                player.Stop();
+                music = false;
             }
         }
     }

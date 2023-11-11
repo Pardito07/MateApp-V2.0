@@ -34,6 +34,8 @@
             btn_restore = new ToolStripButton();
             btn_maximize = new ToolStripButton();
             btn_minimize = new ToolStripButton();
+            btn_play = new ToolStripButton();
+            btn_stop = new ToolStripButton();
             btn_ecuacion = new Button();
             btn_angulos = new Button();
             btn_determinante = new Button();
@@ -53,7 +55,7 @@
             tsp_top.BackColor = Color.MediumSpringGreen;
             tsp_top.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             tsp_top.ImageScalingSize = new Size(24, 24);
-            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize });
+            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_play, btn_stop });
             tsp_top.Location = new Point(0, 0);
             tsp_top.Name = "tsp_top";
             tsp_top.Size = new Size(1163, 33);
@@ -105,6 +107,26 @@
             btn_minimize.Size = new Size(34, 28);
             btn_minimize.Text = "Minimizar";
             btn_minimize.Click += btn_minimize_Click;
+            // 
+            // btn_play
+            // 
+            btn_play.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btn_play.Image = (Image)resources.GetObject("btn_play.Image");
+            btn_play.ImageTransparentColor = Color.Magenta;
+            btn_play.Name = "btn_play";
+            btn_play.Size = new Size(34, 28);
+            btn_play.Text = "reproducir música";
+            btn_play.Click += btn_play_Click;
+            // 
+            // btn_stop
+            // 
+            btn_stop.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btn_stop.Image = (Image)resources.GetObject("btn_stop.Image");
+            btn_stop.ImageTransparentColor = Color.Magenta;
+            btn_stop.Name = "btn_stop";
+            btn_stop.Size = new Size(34, 28);
+            btn_stop.Text = "pausar música";
+            btn_stop.Click += btn_stop_Click;
             // 
             // btn_ecuacion
             // 
@@ -316,5 +338,7 @@
         private Button btn_plano;
         private Button btn_creditos;
         private Label lbl_titulo;
+        private ToolStripButton btn_play;
+        private ToolStripButton btn_stop;
     }
 }

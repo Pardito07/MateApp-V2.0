@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EcuacionCuadratica));
-            toolStrip1 = new ToolStrip();
+            tsp_top = new ToolStrip();
             btn_close = new ToolStripButton();
             btn_restore = new ToolStripButton();
             btn_maximize = new ToolStripButton();
@@ -48,20 +48,21 @@
             txt_x2 = new TextBox();
             btn_limpiar = new Button();
             label1 = new Label();
-            toolStrip1.SuspendLayout();
+            tsp_top.SuspendLayout();
             SuspendLayout();
             // 
-            // toolStrip1
+            // tsp_top
             // 
-            toolStrip1.BackColor = Color.MediumTurquoise;
-            toolStrip1.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 33);
-            toolStrip1.TabIndex = 1;
-            toolStrip1.Text = "toolStrip1";
+            tsp_top.BackColor = Color.MediumTurquoise;
+            tsp_top.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            tsp_top.ImageScalingSize = new Size(24, 24);
+            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
+            tsp_top.Location = new Point(0, 0);
+            tsp_top.Name = "tsp_top";
+            tsp_top.Size = new Size(1163, 33);
+            tsp_top.TabIndex = 1;
+            tsp_top.Text = "toolStrip1";
+            tsp_top.MouseDown += tsp_top_MouseDown;
             // 
             // btn_close
             // 
@@ -300,7 +301,7 @@
             Controls.Add(label2);
             Controls.Add(lbl_a);
             Controls.Add(btn_calcular);
-            Controls.Add(toolStrip1);
+            Controls.Add(tsp_top);
             Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -308,15 +309,15 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EcuacionCuadratica";
             Load += EcuacionCuadratica_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            tsp_top.ResumeLayout(false);
+            tsp_top.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ToolStrip toolStrip1;
+        private ToolStrip tsp_top;
         private ToolStripButton btn_close;
         private ToolStripButton btn_restore;
         private ToolStripButton btn_maximize;

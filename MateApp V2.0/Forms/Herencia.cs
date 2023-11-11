@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +18,6 @@ namespace MateApp_V2._0.Forms
             InitializeComponent();
         }
 
-        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -115,15 +115,64 @@ namespace MateApp_V2._0.Forms
 
         void CalcularHerencia(int herencia)
         {
-            double juan, luis, rosa;
+            double juan, luis, rosa, licenciado = 0, porcentaje;
 
             juan = herencia / 3;
             luis = (4 * herencia) / 9;
             rosa = (2 * herencia) / 9;
 
+            if (juan < herencia / 3)
+            {
+                porcentaje = juan * 0.03;
+                juan = juan - porcentaje;
+                licenciado += porcentaje;
+            }
+            else
+            {
+                porcentaje = juan * 0.05;
+                juan = juan - porcentaje;
+                licenciado += porcentaje;
+            }
+
+            if (luis < herencia / 3)
+            {
+                porcentaje = luis * 0.03;
+                luis = luis - porcentaje;
+                licenciado += porcentaje;
+            }
+            else
+            {
+                porcentaje = luis * 0.05;
+                luis = luis - porcentaje;
+                licenciado += porcentaje;
+            }
+
+            if (rosa < herencia / 3)
+            {
+                porcentaje = rosa * 0.03;
+                rosa = rosa - porcentaje;
+                licenciado += porcentaje;
+            }
+            else
+            {
+                porcentaje = rosa * 0.05;
+                rosa = rosa - porcentaje;
+                licenciado += porcentaje;
+            }
+
             txt_juan.Text = Convert.ToString(juan);
             txt_luis.Text = Convert.ToString(luis);
             txt_rosa.Text = Convert.ToString(rosa);
+            txt_licenciado.Text = Convert.ToString(licenciado);
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            txt_herencia.Text = "";
+            txt_juan.Text = "";
+            txt_luis.Text = "";
+            txt_rosa.Text = "";
+            txt_licenciado.Text = "";
         }
     }
 }

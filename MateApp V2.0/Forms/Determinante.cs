@@ -17,6 +17,15 @@ namespace MateApp_V2._0.Forms
             InitializeComponent();
         }
 
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+
         private void btn_volver_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
@@ -73,6 +82,15 @@ namespace MateApp_V2._0.Forms
             btn_restore.Visible = false;
         }
 
+        private void tsp_top_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
         private void btn_retirar_Click(object sender, EventArgs e)
         {
             string a1, b1, r1, c2, d2, s2;
@@ -82,7 +100,7 @@ namespace MateApp_V2._0.Forms
             c2 = txt_c2.Text;
             d2 = txt_d2.Text;
             s2 = txt_s2.Text;
-            string[] campos = new string [] { a1, b1, r1, c2, d2, s2 };
+            string[] campos = new string[] { a1, b1, r1, c2, d2, s2 };
 
             foreach (string valor in campos)
             {

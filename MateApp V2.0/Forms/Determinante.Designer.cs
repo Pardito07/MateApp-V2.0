@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Determinante));
-            toolStrip1 = new ToolStrip();
+            tsp_top = new ToolStrip();
             btn_close = new ToolStripButton();
             btn_restore = new ToolStripButton();
             btn_maximize = new ToolStripButton();
@@ -56,20 +56,21 @@
             label15 = new Label();
             txt_x = new TextBox();
             txt_y = new TextBox();
-            toolStrip1.SuspendLayout();
+            tsp_top.SuspendLayout();
             SuspendLayout();
             // 
-            // toolStrip1
+            // tsp_top
             // 
-            toolStrip1.BackColor = Color.LightSalmon;
-            toolStrip1.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 33);
-            toolStrip1.TabIndex = 4;
-            toolStrip1.Text = "toolStrip1";
+            tsp_top.BackColor = Color.LightSalmon;
+            tsp_top.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            tsp_top.ImageScalingSize = new Size(24, 24);
+            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
+            tsp_top.Location = new Point(0, 0);
+            tsp_top.Name = "tsp_top";
+            tsp_top.Size = new Size(1163, 33);
+            tsp_top.TabIndex = 4;
+            tsp_top.Text = "toolStrip1";
+            tsp_top.MouseDown += tsp_top_MouseDown;
             // 
             // btn_close
             // 
@@ -190,6 +191,7 @@
             txt_a1.BorderStyle = BorderStyle.FixedSingle;
             txt_a1.Location = new Point(88, 239);
             txt_a1.Name = "txt_a1";
+            txt_a1.ShortcutsEnabled = false;
             txt_a1.Size = new Size(150, 31);
             txt_a1.TabIndex = 12;
             txt_a1.KeyPress += txt_a1_KeyPress;
@@ -200,6 +202,7 @@
             txt_b1.BorderStyle = BorderStyle.FixedSingle;
             txt_b1.Location = new Point(538, 239);
             txt_b1.Name = "txt_b1";
+            txt_b1.ShortcutsEnabled = false;
             txt_b1.Size = new Size(150, 31);
             txt_b1.TabIndex = 14;
             txt_b1.KeyPress += txt_b1_KeyPress;
@@ -210,6 +213,7 @@
             txt_r1.BorderStyle = BorderStyle.FixedSingle;
             txt_r1.Location = new Point(972, 239);
             txt_r1.Name = "txt_r1";
+            txt_r1.ShortcutsEnabled = false;
             txt_r1.Size = new Size(150, 31);
             txt_r1.TabIndex = 16;
             txt_r1.KeyPress += txt_r1_KeyPress;
@@ -232,6 +236,7 @@
             txt_s2.BorderStyle = BorderStyle.FixedSingle;
             txt_s2.Location = new Point(972, 387);
             txt_s2.Name = "txt_s2";
+            txt_s2.ShortcutsEnabled = false;
             txt_s2.Size = new Size(150, 31);
             txt_s2.TabIndex = 27;
             txt_s2.KeyPress += txt_s2_KeyPress;
@@ -242,6 +247,7 @@
             txt_d2.BorderStyle = BorderStyle.FixedSingle;
             txt_d2.Location = new Point(538, 387);
             txt_d2.Name = "txt_d2";
+            txt_d2.ShortcutsEnabled = false;
             txt_d2.Size = new Size(150, 31);
             txt_d2.TabIndex = 25;
             txt_d2.KeyPress += txt_d2_KeyPress;
@@ -252,6 +258,7 @@
             txt_c2.BorderStyle = BorderStyle.FixedSingle;
             txt_c2.Location = new Point(88, 387);
             txt_c2.Name = "txt_c2";
+            txt_c2.ShortcutsEnabled = false;
             txt_c2.Size = new Size(150, 31);
             txt_c2.TabIndex = 23;
             txt_c2.KeyPress += txt_c2_KeyPress;
@@ -389,7 +396,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(toolStrip1);
+            Controls.Add(tsp_top);
             Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
@@ -398,15 +405,15 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Determinante";
             Load += Determinante_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            tsp_top.ResumeLayout(false);
+            tsp_top.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ToolStrip toolStrip1;
+        private ToolStrip tsp_top;
         private ToolStripButton btn_close;
         private ToolStripButton btn_restore;
         private ToolStripButton btn_maximize;

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AngulosAgudos));
-            toolStrip1 = new ToolStrip();
+            tsp_top = new ToolStrip();
             btn_close = new ToolStripButton();
             btn_restore = new ToolStripButton();
             btn_maximize = new ToolStripButton();
@@ -49,21 +49,22 @@
             txt_mayor = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            toolStrip1.SuspendLayout();
+            tsp_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // toolStrip1
+            // tsp_top
             // 
-            toolStrip1.BackColor = Color.RoyalBlue;
-            toolStrip1.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 33);
-            toolStrip1.TabIndex = 2;
-            toolStrip1.Text = "toolStrip1";
+            tsp_top.BackColor = Color.RoyalBlue;
+            tsp_top.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            tsp_top.ImageScalingSize = new Size(24, 24);
+            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
+            tsp_top.Location = new Point(0, 0);
+            tsp_top.Name = "tsp_top";
+            tsp_top.Size = new Size(1163, 33);
+            tsp_top.TabIndex = 2;
+            tsp_top.Text = "toolStrip1";
+            tsp_top.MouseDown += tsp_top_MouseDown;
             // 
             // btn_close
             // 
@@ -152,6 +153,7 @@
             txt_c.Location = new Point(280, 602);
             txt_c.Name = "txt_c";
             txt_c.ReadOnly = true;
+            txt_c.ShortcutsEnabled = false;
             txt_c.Size = new Size(180, 31);
             txt_c.TabIndex = 21;
             // 
@@ -174,6 +176,7 @@
             txt_b.Location = new Point(280, 524);
             txt_b.Name = "txt_b";
             txt_b.ReadOnly = true;
+            txt_b.ShortcutsEnabled = false;
             txt_b.Size = new Size(180, 31);
             txt_b.TabIndex = 19;
             // 
@@ -196,6 +199,7 @@
             txt_hipotenusa.Location = new Point(280, 454);
             txt_hipotenusa.Name = "txt_hipotenusa";
             txt_hipotenusa.ReadOnly = true;
+            txt_hipotenusa.ShortcutsEnabled = false;
             txt_hipotenusa.Size = new Size(180, 31);
             txt_hipotenusa.TabIndex = 18;
             // 
@@ -223,6 +227,7 @@
             btn_limpiar.TabIndex = 24;
             btn_limpiar.Text = "Limpiar";
             btn_limpiar.UseVisualStyleBackColor = false;
+            btn_limpiar.Click += btn_limpiar_Click;
             // 
             // btn_calcular
             // 
@@ -237,6 +242,7 @@
             btn_calcular.TabIndex = 23;
             btn_calcular.Text = "Calcular";
             btn_calcular.UseVisualStyleBackColor = false;
+            btn_calcular.Click += btn_calcular_Click;
             // 
             // txt_menor
             // 
@@ -244,8 +250,10 @@
             txt_menor.BorderStyle = BorderStyle.FixedSingle;
             txt_menor.Location = new Point(280, 260);
             txt_menor.Name = "txt_menor";
+            txt_menor.ShortcutsEnabled = false;
             txt_menor.Size = new Size(180, 31);
             txt_menor.TabIndex = 17;
+            txt_menor.KeyPress += txt_menor_KeyPress;
             // 
             // txt_mayor
             // 
@@ -253,8 +261,10 @@
             txt_mayor.BorderStyle = BorderStyle.FixedSingle;
             txt_mayor.Location = new Point(280, 205);
             txt_mayor.Name = "txt_mayor";
+            txt_mayor.ShortcutsEnabled = false;
             txt_mayor.Size = new Size(180, 31);
             txt_mayor.TabIndex = 16;
+            txt_mayor.KeyPress += txt_mayor_KeyPress;
             // 
             // label2
             // 
@@ -299,7 +309,7 @@
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(pictureBox1);
-            Controls.Add(toolStrip1);
+            Controls.Add(tsp_top);
             Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -307,8 +317,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AngulosAgudos";
             Load += AngulosAgudos_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            tsp_top.ResumeLayout(false);
+            tsp_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -316,7 +326,7 @@
 
         #endregion
 
-        private ToolStrip toolStrip1;
+        private ToolStrip tsp_top;
         private ToolStripButton btn_close;
         private ToolStripButton btn_restore;
         private ToolStripButton btn_maximize;

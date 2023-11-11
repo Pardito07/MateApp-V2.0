@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Creditos));
-            toolStrip1 = new ToolStrip();
+            tsp_top = new ToolStrip();
             btn_close = new ToolStripButton();
             btn_restore = new ToolStripButton();
             btn_maximize = new ToolStripButton();
@@ -42,29 +42,27 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            pictureBox4 = new PictureBox();
-            label5 = new Label();
             pictureBox5 = new PictureBox();
             label6 = new Label();
-            toolStrip1.SuspendLayout();
+            tsp_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
-            // toolStrip1
+            // tsp_top
             // 
-            toolStrip1.BackColor = Color.Transparent;
-            toolStrip1.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1163, 33);
-            toolStrip1.TabIndex = 2;
-            toolStrip1.Text = "toolStrip1";
+            tsp_top.BackColor = Color.Transparent;
+            tsp_top.Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
+            tsp_top.ImageScalingSize = new Size(24, 24);
+            tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
+            tsp_top.Location = new Point(0, 0);
+            tsp_top.Name = "tsp_top";
+            tsp_top.Size = new Size(1163, 33);
+            tsp_top.TabIndex = 2;
+            tsp_top.Text = "toolStrip1";
+            tsp_top.MouseDown += tsp_top_MouseDown;
             // 
             // btn_close
             // 
@@ -125,7 +123,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Bottom;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(835, 107);
+            pictureBox1.Location = new Point(686, 107);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(237, 276);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -187,7 +185,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("JetBrains Mono", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(835, 386);
+            label3.Location = new Point(686, 386);
             label3.Name = "label3";
             label3.Size = new Size(237, 30);
             label3.TabIndex = 8;
@@ -206,35 +204,11 @@
             label4.TabIndex = 9;
             label4.Text = "Germán Alegría";
             // 
-            // pictureBox4
-            // 
-            pictureBox4.Anchor = AnchorStyles.Bottom;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(502, 107);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(237, 276);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 10;
-            pictureBox4.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.Anchor = AnchorStyles.Bottom;
-            label5.AutoSize = true;
-            label5.BackColor = Color.White;
-            label5.Font = new Font("JetBrains Mono", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(528, 386);
-            label5.Name = "label5";
-            label5.Size = new Size(195, 30);
-            label5.TabIndex = 11;
-            label5.Text = "Diego Paredes";
-            // 
             // pictureBox5
             // 
             pictureBox5.Anchor = AnchorStyles.Bottom;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(173, 107);
+            pictureBox5.Location = new Point(307, 107);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(236, 276);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -248,7 +222,7 @@
             label6.BackColor = Color.White;
             label6.Font = new Font("JetBrains Mono", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.Black;
-            label6.Location = new Point(204, 386);
+            label6.Location = new Point(338, 386);
             label6.Name = "label6";
             label6.Size = new Size(181, 30);
             label6.TabIndex = 13;
@@ -264,8 +238,6 @@
             ClientSize = new Size(1163, 751);
             Controls.Add(label6);
             Controls.Add(pictureBox5);
-            Controls.Add(label5);
-            Controls.Add(pictureBox4);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -273,7 +245,7 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Controls.Add(toolStrip1);
+            Controls.Add(tsp_top);
             Font = new Font("JetBrains Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -281,12 +253,11 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Creditos";
             Load += Creditos_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            tsp_top.ResumeLayout(false);
+            tsp_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -294,7 +265,7 @@
 
         #endregion
 
-        private ToolStrip toolStrip1;
+        private ToolStrip tsp_top;
         private ToolStripButton btn_close;
         private ToolStripButton btn_restore;
         private ToolStripButton btn_maximize;
@@ -307,8 +278,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private PictureBox pictureBox4;
-        private Label label5;
         private PictureBox pictureBox5;
         private Label label6;
     }
