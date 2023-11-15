@@ -127,5 +127,10 @@ namespace MateApp_V2._0.Forms
                 Application.Exit();
             }
         }
+
+        private void Ordenamiento_Load(object sender, EventArgs e)
+        {
+            btn_restore.Visible = false;
+        }
     }
 }

@@ -312,6 +312,7 @@
             Name = "Ordenamiento";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ordenamiento";
+            Load += Ordenamiento_Load;
             tsp_top.ResumeLayout(false);
             tsp_top.PerformLayout();
             ResumeLayout(false);

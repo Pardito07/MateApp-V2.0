@@ -16,5 +16,10 @@ namespace MateApp_V2._0.Forms
         {
             InitializeComponent();
         }
+
+        private void PlanoCartesiano_Load(object sender, EventArgs e)
+        {
+            btn_restore.Visible = false;
+        }
     }
 }
