@@ -125,7 +125,7 @@ namespace MateApp_V2._0.Forms
 
             txt_b.Text = Convert.ToString(Math.Round(anguloB)) + "°";
             txt_c.Text = Convert.ToString(Math.Round(anguloC)) + "°";
-            txt_hipotenusa.Text = Convert.ToString(Math.Round(hipotenusa)) + "°";
+            txt_hipotenusa.Text = Convert.ToString(Math.Round(hipotenusa));
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)

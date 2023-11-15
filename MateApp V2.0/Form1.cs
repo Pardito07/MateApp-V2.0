@@ -144,5 +144,19 @@ namespace MateApp_V2._0
                 music = false;
             }
         }
+
+        private void btn_ventas_Click(object sender, EventArgs e)
+        {
+            PromedioVentas promedio = new PromedioVentas();
+            promedio.Show();
+            this.Hide();
+        }
+
+        private void btn_ordenamiento_Click(object sender, EventArgs e)
+        {
+            Ordenamiento ordenamiento = new Ordenamiento();
+            ordenamiento.Show();
+            this.Hide();
+        }
     }
 }

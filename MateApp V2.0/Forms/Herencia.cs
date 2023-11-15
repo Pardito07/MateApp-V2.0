@@ -124,46 +124,40 @@ namespace MateApp_V2._0.Forms
             if (juan < herencia / 3)
             {
                 porcentaje = juan * 0.03;
-                juan = juan - porcentaje;
                 licenciado += porcentaje;
             }
             else
             {
                 porcentaje = juan * 0.05;
-                juan = juan - porcentaje;
                 licenciado += porcentaje;
             }
 
             if (luis < herencia / 3)
             {
                 porcentaje = luis * 0.03;
-                luis = luis - porcentaje;
                 licenciado += porcentaje;
             }
             else
             {
                 porcentaje = luis * 0.05;
-                luis = luis - porcentaje;
                 licenciado += porcentaje;
             }
 
             if (rosa < herencia / 3)
             {
                 porcentaje = rosa * 0.03;
-                rosa = rosa - porcentaje;
                 licenciado += porcentaje;
             }
             else
             {
                 porcentaje = rosa * 0.05;
-                rosa = rosa - porcentaje;
                 licenciado += porcentaje;
             }
 
-            txt_juan.Text = Convert.ToString(juan);
-            txt_luis.Text = Convert.ToString(luis);
-            txt_rosa.Text = Convert.ToString(rosa);
-            txt_licenciado.Text = Convert.ToString(licenciado);
+            txt_juan.Text = "$" + Convert.ToString(Math.Round(juan));
+            txt_luis.Text = "$" + Convert.ToString(Math.Round(luis));
+            txt_rosa.Text = "$" + Convert.ToString(Math.Round(rosa));
+            txt_licenciado.Text = "$" + Convert.ToString(Math.Round(licenciado));
         }
 
         private void btn_limpiar_Click(object sender, EventArgs e)
