@@ -144,5 +144,29 @@ namespace MateApp_V2._0.Forms
                 lbl_mensaje.Text = "Lo esperamos pronto";
             }
         }
+
+        private void txt_venta1_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_venta2_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_venta3_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

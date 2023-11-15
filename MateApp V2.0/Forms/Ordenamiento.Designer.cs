@@ -55,13 +55,15 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.PaleVioletRed;
             label1.Font = new Font("Microsoft Sans Serif", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(494, 41);
+            label1.Location = new Point(473, 58);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(200, 33);
+            label1.Size = new Size(298, 52);
             label1.TabIndex = 0;
             label1.Text = "Ordenamiento";
             // 
@@ -73,7 +75,8 @@
             tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_volver });
             tsp_top.Location = new Point(0, 0);
             tsp_top.Name = "tsp_top";
-            tsp_top.Size = new Size(1163, 31);
+            tsp_top.Padding = new Padding(0, 0, 3, 0);
+            tsp_top.Size = new Size(1163, 33);
             tsp_top.TabIndex = 2;
             tsp_top.Text = "toolStrip1";
             tsp_top.MouseDown += tsp_top_MouseDown;
@@ -86,7 +89,7 @@
             btn_close.ImageTransparentColor = Color.Magenta;
             btn_close.Name = "btn_close";
             btn_close.RightToLeft = RightToLeft.No;
-            btn_close.Size = new Size(28, 28);
+            btn_close.Size = new Size(34, 28);
             btn_close.Text = "Cerrar";
             btn_close.Click += btn_close_Click;
             // 
@@ -97,7 +100,7 @@
             btn_restore.Image = (Image)resources.GetObject("btn_restore.Image");
             btn_restore.ImageTransparentColor = Color.Magenta;
             btn_restore.Name = "btn_restore";
-            btn_restore.Size = new Size(28, 28);
+            btn_restore.Size = new Size(34, 28);
             btn_restore.Text = "restaurar";
             btn_restore.Click += btn_restore_Click;
             // 
@@ -108,7 +111,7 @@
             btn_maximize.Image = (Image)resources.GetObject("btn_maximize.Image");
             btn_maximize.ImageTransparentColor = Color.Magenta;
             btn_maximize.Name = "btn_maximize";
-            btn_maximize.Size = new Size(28, 28);
+            btn_maximize.Size = new Size(34, 28);
             btn_maximize.Text = "Maximizar";
             btn_maximize.Click += btn_maximize_Click;
             // 
@@ -119,7 +122,7 @@
             btn_minimize.Image = (Image)resources.GetObject("btn_minimize.Image");
             btn_minimize.ImageTransparentColor = Color.Magenta;
             btn_minimize.Name = "btn_minimize";
-            btn_minimize.Size = new Size(28, 28);
+            btn_minimize.Size = new Size(34, 28);
             btn_minimize.Text = "Minimizar";
             btn_minimize.Click += btn_minimize_Click;
             // 
@@ -129,66 +132,78 @@
             btn_volver.Image = (Image)resources.GetObject("btn_volver.Image");
             btn_volver.ImageTransparentColor = Color.Magenta;
             btn_volver.Name = "btn_volver";
-            btn_volver.Size = new Size(28, 28);
+            btn_volver.Size = new Size(34, 28);
             btn_volver.Text = "Volver";
             btn_volver.Click += btn_volver_Click;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Bottom;
             label2.AutoSize = true;
             label2.BackColor = Color.PaleVioletRed;
             label2.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(138, 222);
+            label2.Location = new Point(62, 213);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(87, 18);
+            label2.Size = new Size(134, 29);
             label2.TabIndex = 3;
             label2.Text = "Número 1:";
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Bottom;
             label3.AutoSize = true;
             label3.BackColor = Color.PaleVioletRed;
             label3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(138, 408);
+            label3.Location = new Point(62, 523);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(82, 18);
+            label3.Size = new Size(127, 29);
             label3.TabIndex = 4;
             label3.Text = "Número 3";
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Bottom;
             label4.AutoSize = true;
             label4.BackColor = Color.PaleVioletRed;
             label4.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(138, 315);
+            label4.Location = new Point(62, 368);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(87, 18);
+            label4.Size = new Size(134, 29);
             label4.TabIndex = 5;
             label4.Text = "Número 2:";
             // 
             // txt_num2
             // 
-            txt_num2.Location = new Point(138, 359);
+            txt_num2.Anchor = AnchorStyles.Bottom;
+            txt_num2.Location = new Point(62, 441);
+            txt_num2.Margin = new Padding(4, 5, 4, 5);
             txt_num2.Name = "txt_num2";
-            txt_num2.Size = new Size(180, 23);
+            txt_num2.Size = new Size(255, 31);
             txt_num2.TabIndex = 2;
             // 
             // txt_num1
             // 
-            txt_num1.Location = new Point(138, 266);
+            txt_num1.Anchor = AnchorStyles.Bottom;
+            txt_num1.Location = new Point(62, 286);
+            txt_num1.Margin = new Padding(4, 5, 4, 5);
             txt_num1.Name = "txt_num1";
-            txt_num1.Size = new Size(180, 23);
+            txt_num1.Size = new Size(255, 31);
             txt_num1.TabIndex = 1;
             txt_num1.KeyPress += textBox2_KeyPress;
             // 
             // txt_num3
             // 
-            txt_num3.Location = new Point(138, 452);
+            txt_num3.Anchor = AnchorStyles.Bottom;
+            txt_num3.Location = new Point(62, 596);
+            txt_num3.Margin = new Padding(4, 5, 4, 5);
             txt_num3.Name = "txt_num3";
-            txt_num3.Size = new Size(180, 23);
+            txt_num3.Size = new Size(255, 31);
             txt_num3.TabIndex = 3;
             // 
             // btn_calcular
@@ -198,9 +213,10 @@
             btn_calcular.Cursor = Cursors.Hand;
             btn_calcular.Font = new Font("Microsoft Sans Serif", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             btn_calcular.ForeColor = Color.White;
-            btn_calcular.Location = new Point(516, 283);
+            btn_calcular.Location = new Point(489, 255);
+            btn_calcular.Margin = new Padding(4, 5, 4, 5);
             btn_calcular.Name = "btn_calcular";
-            btn_calcular.Size = new Size(141, 56);
+            btn_calcular.Size = new Size(201, 93);
             btn_calcular.TabIndex = 4;
             btn_calcular.Text = "Calcular";
             btn_calcular.UseVisualStyleBackColor = false;
@@ -213,9 +229,10 @@
             btn_limpiar.Cursor = Cursors.Hand;
             btn_limpiar.Font = new Font("Microsoft Sans Serif", 10.999999F, FontStyle.Bold, GraphicsUnit.Point);
             btn_limpiar.ForeColor = Color.White;
-            btn_limpiar.Location = new Point(516, 359);
+            btn_limpiar.Location = new Point(489, 369);
+            btn_limpiar.Margin = new Padding(4, 5, 4, 5);
             btn_limpiar.Name = "btn_limpiar";
-            btn_limpiar.Size = new Size(141, 56);
+            btn_limpiar.Size = new Size(201, 93);
             btn_limpiar.TabIndex = 10;
             btn_limpiar.Text = "Limpiar";
             btn_limpiar.UseVisualStyleBackColor = false;
@@ -223,70 +240,82 @@
             // 
             // txt_mayor
             // 
+            txt_mayor.Anchor = AnchorStyles.Bottom;
             txt_mayor.Enabled = false;
-            txt_mayor.Location = new Point(886, 359);
+            txt_mayor.Location = new Point(847, 441);
+            txt_mayor.Margin = new Padding(4, 5, 4, 5);
             txt_mayor.Name = "txt_mayor";
             txt_mayor.ReadOnly = true;
-            txt_mayor.Size = new Size(180, 23);
+            txt_mayor.Size = new Size(255, 31);
             txt_mayor.TabIndex = 16;
             // 
             // txt_menor
             // 
+            txt_menor.Anchor = AnchorStyles.Bottom;
             txt_menor.Enabled = false;
-            txt_menor.Location = new Point(886, 266);
+            txt_menor.Location = new Point(847, 286);
+            txt_menor.Margin = new Padding(4, 5, 4, 5);
             txt_menor.Name = "txt_menor";
             txt_menor.ReadOnly = true;
-            txt_menor.Size = new Size(180, 23);
+            txt_menor.Size = new Size(255, 31);
             txt_menor.TabIndex = 15;
             // 
             // txt_centro
             // 
+            txt_centro.Anchor = AnchorStyles.Bottom;
             txt_centro.Enabled = false;
-            txt_centro.Location = new Point(886, 452);
+            txt_centro.Location = new Point(847, 596);
+            txt_centro.Margin = new Padding(4, 5, 4, 5);
             txt_centro.Name = "txt_centro";
             txt_centro.ReadOnly = true;
-            txt_centro.Size = new Size(180, 23);
+            txt_centro.Size = new Size(255, 31);
             txt_centro.TabIndex = 14;
             // 
             // label5
             // 
+            label5.Anchor = AnchorStyles.Bottom;
             label5.AutoSize = true;
             label5.BackColor = Color.PaleVioletRed;
             label5.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(886, 315);
+            label5.Location = new Point(847, 368);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(153, 18);
+            label5.Size = new Size(237, 29);
             label5.TabIndex = 13;
             label5.Text = "Número del centro:";
             // 
             // label6
             // 
+            label6.Anchor = AnchorStyles.Bottom;
             label6.AutoSize = true;
             label6.BackColor = Color.PaleVioletRed;
             label6.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(886, 408);
+            label6.Location = new Point(847, 523);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(120, 18);
+            label6.Size = new Size(184, 29);
             label6.TabIndex = 12;
             label6.Text = "Número mayor";
             // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Bottom;
             label7.AutoSize = true;
             label7.BackColor = Color.PaleVioletRed;
             label7.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(886, 222);
+            label7.Location = new Point(847, 213);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(126, 18);
+            label7.Size = new Size(194, 29);
             label7.TabIndex = 11;
             label7.Text = "Número menor:";
             // 
             // Ordenamiento
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -309,6 +338,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Ordenamiento";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ordenamiento";

@@ -69,8 +69,6 @@ namespace MateApp_V2._0.Forms
 
         }
 
-
-
         private void btn_minimize_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;

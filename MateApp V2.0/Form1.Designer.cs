@@ -58,7 +58,7 @@
             tsp_top.Items.AddRange(new ToolStripItem[] { btn_close, btn_restore, btn_maximize, btn_minimize, btn_play, btn_stop });
             tsp_top.Location = new Point(0, 0);
             tsp_top.Name = "tsp_top";
-            tsp_top.Size = new Size(1163, 31);
+            tsp_top.Size = new Size(1163, 33);
             tsp_top.TabIndex = 0;
             tsp_top.Text = "toolStrip1";
             tsp_top.MouseDown += tsp_top_MouseDown;
@@ -71,7 +71,7 @@
             btn_close.ImageTransparentColor = Color.Magenta;
             btn_close.Name = "btn_close";
             btn_close.RightToLeft = RightToLeft.No;
-            btn_close.Size = new Size(28, 28);
+            btn_close.Size = new Size(34, 28);
             btn_close.Text = "Cerrar";
             btn_close.Click += btn_close_Click;
             // 
@@ -82,7 +82,7 @@
             btn_restore.Image = (Image)resources.GetObject("btn_restore.Image");
             btn_restore.ImageTransparentColor = Color.Magenta;
             btn_restore.Name = "btn_restore";
-            btn_restore.Size = new Size(28, 28);
+            btn_restore.Size = new Size(34, 28);
             btn_restore.Text = "restaurar";
             btn_restore.Click += btn_restore_Click;
             // 
@@ -93,7 +93,7 @@
             btn_maximize.Image = (Image)resources.GetObject("btn_maximize.Image");
             btn_maximize.ImageTransparentColor = Color.Magenta;
             btn_maximize.Name = "btn_maximize";
-            btn_maximize.Size = new Size(28, 28);
+            btn_maximize.Size = new Size(34, 28);
             btn_maximize.Text = "Maximizar";
             btn_maximize.Click += btn_maximize_Click;
             // 
@@ -104,7 +104,7 @@
             btn_minimize.Image = (Image)resources.GetObject("btn_minimize.Image");
             btn_minimize.ImageTransparentColor = Color.Magenta;
             btn_minimize.Name = "btn_minimize";
-            btn_minimize.Size = new Size(28, 28);
+            btn_minimize.Size = new Size(34, 28);
             btn_minimize.Text = "Minimizar";
             btn_minimize.Click += btn_minimize_Click;
             // 
@@ -114,7 +114,7 @@
             btn_play.Image = (Image)resources.GetObject("btn_play.Image");
             btn_play.ImageTransparentColor = Color.Magenta;
             btn_play.Name = "btn_play";
-            btn_play.Size = new Size(28, 28);
+            btn_play.Size = new Size(34, 28);
             btn_play.Text = "reproducir música";
             btn_play.Click += btn_play_Click;
             // 
@@ -124,7 +124,7 @@
             btn_stop.Image = (Image)resources.GetObject("btn_stop.Image");
             btn_stop.ImageTransparentColor = Color.Magenta;
             btn_stop.Name = "btn_stop";
-            btn_stop.Size = new Size(28, 28);
+            btn_stop.Size = new Size(34, 28);
             btn_stop.Text = "pausar música";
             btn_stop.Click += btn_stop_Click;
             // 
@@ -231,6 +231,7 @@
             btn_mcd.TabIndex = 7;
             btn_mcd.Text = "M.C.D";
             btn_mcd.UseVisualStyleBackColor = false;
+            btn_mcd.Click += btn_mcd_Click;
             // 
             // btn_ordenamiento
             // 
@@ -260,6 +261,7 @@
             btn_plano.TabIndex = 9;
             btn_plano.Text = "Plano Cartesiano";
             btn_plano.UseVisualStyleBackColor = false;
+            btn_plano.Click += btn_plano_Click;
             // 
             // btn_creditos
             // 
@@ -285,13 +287,13 @@
             lbl_titulo.ForeColor = SystemColors.ControlText;
             lbl_titulo.Location = new Point(427, 61);
             lbl_titulo.Name = "lbl_titulo";
-            lbl_titulo.Size = new Size(240, 36);
+            lbl_titulo.Size = new Size(349, 52);
             lbl_titulo.TabIndex = 11;
             lbl_titulo.Text = "Matemáticas V8";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");

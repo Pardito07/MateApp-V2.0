@@ -158,5 +158,19 @@ namespace MateApp_V2._0
             ordenamiento.Show();
             this.Hide();
         }
+
+        private void btn_mcd_Click(object sender, EventArgs e)
+        {
+            MCD mcd = new MCD();
+            mcd.Show();
+            this.Hide();
+        }
+
+        private void btn_plano_Click(object sender, EventArgs e)
+        {
+            PlanoCartesiano planocartesiano = new PlanoCartesiano();
+            planocartesiano.Show();
+            this.Hide();
+        }
     }
 }
